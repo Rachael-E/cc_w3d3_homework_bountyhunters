@@ -10,6 +10,8 @@ bounty2 = Bounty.new( options_hash2 )
 options_hash3 = { 'name' => 'Rick Raptor', 'homeworld' => 'Gondwana', 'fav_weapon' => 'sword', 'bounty_value' => '1000'}
 bounty3 = Bounty.new( options_hash3 )
 
+Bounty.delete_all()
+
 bounty1.save()
 bounty2.save()
 bounty3.save()
@@ -20,3 +22,5 @@ p all_bounties.length
 first_object = all_bounties.first
 first_object.name = "Talia Trilobite"
 first_object.update()
+
+first_object.delete()
